@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font: 300 1em 'Helvetica Neue', 'Segoe UI';
+        }
+        nav {
+            background-color: #f5f5f5;
+            padding: 0.35em 0.4em;
+        }
+        nav li {
+            display: inline-block;
+            padding: 0 0.25em;
+        }
+
+        nav li:hover {
+            color: dodgerblue;
+            cursor: pointer;
+        }
+
+        nav > div > ul > li:first-child {
+            padding-left: 0.5em;
+        }
+
+        ul {
+            display: inline-block;
+            padding: 0;
+        }
+        input {
+            padding: 0.5em;
+            font: 300 1em 'Helvetica Neue', 'Segoe UI';
+        }
+
+        nav > div.left-block {
+            float: left;
+        }
+        nav > div.right-block {
+            float: right;
+
+        }
+
+        nav::after {
+            content: '';
+            display: block;
+            background-color: aqua;
+            clear: both;
+        }
+        .right-block.warning {
+            color: red;
+        }
+
+        li.active + li {
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left-block">
+            <input type="text"/>
+            <ul>
+                <li>Explore</li>
+                <li class="active">Gist</li>
+                <li>Blog</li>
+                <li>Help</li>
+            </ul>
+        </div>
+        <div class="right-block warning">
+            <ul>
+                <li>Explore</li>
+                <li>Gist</li>
+                <li>Blog</li>
+                <li>Help</li>
+            </ul>
+        </div>
+    </nav>
+
+</ul>
+</body>
+</html>

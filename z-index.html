@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            position: absolute;
+            height: 2em;
+            color: white;
+            width: 2em;
+            background-color: red;
+            text-align: center;
+            font: 200 1em 'Helvetica Neue';
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        div:first-child {
+            top: 5px;
+            left: 5px;
+            background-color: green;
+            z-index: -10;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div>1</div>
+    <div>2</div>
+
+</body>
+</html>

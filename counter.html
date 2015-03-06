@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        for (var i = 0, len = 10; i < len; i++) {
+            setTimeout((function (x) {
+                console.log(x);
+            }).bind(null, i), i * 1000)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
