@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.square {
+            position: relative;
+            width: 10em;
+            height: 10em;
+            border: 1px solid gray;
+            /* todo: read up on vh and vw and which versions of browsers suppport them */
+        }
+
+        div.ball {
+            position: absolute;
+            top: 0;
+            width: 1em;
+            height: 1em;
+            background-color: red;
+            border-radius: 1em;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Loaded the document ... ');
+
+            var ball = document.querySelector('div.ball');
+
+            var i = 0;
+            var intervalid = setInterval(function () {
+                // console.log('Hello from Jui ... ' + i++);
+                ball.style.top = i++ + 'px';
+
+                // todo: make the ball bounce back up
+                // todo: the balll loses height (delta) every time it bounces up
+                // todo: to stop animation, use clearInterval(interalid)
+            }, 15);
+        });
+    </script>
+</head>
+<body>
+    <div class="square">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
