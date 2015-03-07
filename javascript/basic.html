@@ -19,6 +19,7 @@
             height: 1em;
             background-color: red;
             border-radius: 1em;
+            color: white;
         }
     </style>
     <script>
@@ -27,15 +28,37 @@
 
             var ball = document.querySelector('div.ball');
 
-            var i = 0;
+            var i = 0,
+                    counter = 0;
+            var upwards = false;
+            var upperbound = 144;
+            var lowerbound = 0;
             var intervalid = setInterval(function () {
                 // console.log('Hello from Jui ... ' + i++);
-                ball.style.top = i++ + 'px';
+               if (upwards) {
+                   if ( --i < lowerbound ) {
+                       upwards = false;
+                   } else {
+                       ball.style.top = i + 'px';
+                   }
+               } else {
+                   if ( ++i > upperbound ) {
+                       upwards = true;
+                       lowerbound += 20;
+                       if (upperbound <= lowerbound) {
+                           clearInterval(intervalid);
+                           alert('over');
+                       }
+                   } else {
+                       ball.style.top = i + 'px';
+                   }
+               }
+
 
                 // todo: make the ball bounce back up
                 // todo: the balll loses height (delta) every time it bounces up
                 // todo: to stop animation, use clearInterval(interalid)
-            }, 15);
+            }, 2);
         });
     </script>
 </head>
