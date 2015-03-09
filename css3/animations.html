@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.square {
+            width: 2em;
+            height: 2em;
+            background-color: red;
+            position: absolute;
+
+            top: 50px;
+            left: 50px;
+            border-radius: 100%;
+        }
+
+        .ball-animate {
+            animation: jui 500ms linear 1 alternate;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes jui {
+            from {
+                top: 50px;
+            }
+            to {
+                top: 200px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="square ball-animate">
+        
+    </div>
+    <a href="http://www.w3schools.com/cssref/css3_pr_animation.asp">http://www.w3schools.com/cssref/css3_pr_animation.asp</a>
+</body>
+</html>

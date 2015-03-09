@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: red;
+            color: red;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+
+        body:hover {
+            transition: all 2000ms cubic-bezier(.02,.7,.64,.27);
+            background-color: green;
+            color: white;
+        }
+
+        body:hover a {
+            color: white;
+            transition: all 2000ms cubic-bezier(.02,.7,.64,.27);
+            transition-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+<a href="http://cubic-bezier.com/#.02,.7,.64,.27">http://cubic-bezier.com/#.02,.7,.64,.27</a>
+<a href="http://www.w3schools.com/css/css3_transitions.asp">http://www.w3schools.com/css/css3_transitions.asp</a>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.square {
+            width: 2em;
+            height: 2em;
+            background-color: red;
+            position: absolute;
+            margin-left: 200px;
+        }
+
+        .ball-animate {
+            animation: jui 2s linear infinite alternate;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes jui {
+            from {
+                top: 50px;
+                transform: translateY(0) scale3d(1,1,1);
+            }
+            to {
+                top: 200px;
+                transform: translateY(400px) scale3d(2,2,1);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="square ball-animate">
+
+</div>
+
+</body>
+</html>
