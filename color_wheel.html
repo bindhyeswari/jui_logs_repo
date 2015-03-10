@@ -55,11 +55,21 @@
             for (var j = 0; j < 3; j++) {
                 var part = document.createElement('div');
                 part.className = 'part';
-                part.style.color = '';
+                part.style.backgroundColor = randomGenerator();
                 div.appendChild(part);
             }
 
             return div;
+        }
+
+        console.log(randomGenerator());
+
+        function randomGenerator() {
+            var colors = [];
+            for (var i = 0; i < 3; i++) {
+                colors.push(Math.floor(Math.random() * 255));
+            }
+            return 'rgb(' + colors.join(',') + ')';
         }
 
     </script>
