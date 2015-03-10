@@ -1,0 +1,26 @@
+$backcolor: green
+
+div.square
+  font: 200 1em 'Helvetica Neue'
+  background-color: $backcolor
+  color: darken($backcolor, 20%)
+  line-height: 5em
+  text-align: center
+  font-size: 2em
+  width: 10em
+  margin: 1em
+
+@for $i from 1 through 3
+  @keyframes kf-animate-#{$i}
+    from
+      background-color: $backcolor
+      transform: translateX(0)
+    to
+      background-color: lighten($backcolor, 10% * $i)
+      transform: translateX(200px * $i)
+  .animate-#{$i}
+    animation: kf-animate-#{$i} 2s linear
+    animation-fill-mode: forwards
+
+
+

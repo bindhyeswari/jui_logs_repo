@@ -1,0 +1,44 @@
+div.square {
+  font: 200 1em "Helvetica Neue";
+  background-color: green;
+  color: #001a00;
+  line-height: 5em;
+  text-align: center;
+  font-size: 2em;
+  width: 10em;
+  margin: 1em; }
+
+@keyframes kf-animate-1 {
+  from {
+    background-color: green;
+    transform: translateX(0); }
+  to {
+    background-color: #00b300;
+    transform: translateX(200px); } }
+.animate-1 {
+  animation: kf-animate-1 2s linear;
+  animation-fill-mode: forwards; }
+
+@keyframes kf-animate-2 {
+  from {
+    background-color: green;
+    transform: translateX(0); }
+  to {
+    background-color: #00e600;
+    transform: translateX(400px); } }
+.animate-2 {
+  animation: kf-animate-2 2s linear;
+  animation-fill-mode: forwards; }
+
+@keyframes kf-animate-3 {
+  from {
+    background-color: green;
+    transform: translateX(0); }
+  to {
+    background-color: #1aff1a;
+    transform: translateX(600px); } }
+.animate-3 {
+  animation: kf-animate-3 2s linear;
+  animation-fill-mode: forwards; }
+
+/*# sourceMappingURL=base.css.map */
