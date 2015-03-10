@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        div#container {
+            width: 20em;
+            height: 20em;
+            border: 1px solid red;
+
+            margin: 3em auto;
+
+            position: relative;
+        }
+
+        div.swatch {
+            width: 15%;
+            height: 50%;
+            margin: 0 auto;
+            background-color: red;
+
+            position: absolute;
+            transform-origin: 50% 100%;
+            left: 42.5%
+        }
+
+
+        div.part {
+            float: left;
+            width: 100%;
+            height: 33.3333333333%;
+            color: red;
+        }
+
+        div.part:first-child {
+            background-color: green;
+        }
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var container = document.getElementById('container');
+            for (var i = 0, len = 12; i < len; i++) {
+                var div = createSwatch();
+                div.style.transform = 'rotate(' + (30 * i) + 'deg)';
+                container.appendChild(div)
+            }
+        });
+
+        function createSwatch() {
+            var div = document.createElement('div');
+            div.className = 'swatch';
+            for (var j = 0; j < 3; j++) {
+                var part = document.createElement('div');
+                part.className = 'part';
+                part.style.color = '';
+                div.appendChild(part);
+            }
+
+            return div;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="container">
+    </div>
+</body>
+</html>
