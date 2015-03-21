@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="../base.css"/>
+    <script src="primes.js"></script>
     <script>
-
-        function isPrime(num) {
-            for (var i = 2, len = Math.sqrt(num); i <= len; i++) {
-                if (num % i === 0) return false;
-            }
-            return true;
-        }
 
         document.addEventListener('DOMContentLoaded', function () {
             var input = document.querySelector('input');

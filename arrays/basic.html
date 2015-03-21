@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var arr = [1,5,8,11,4,9,6,2];
+
+
+
+        var squared = arr.map(function (num, index) {
+            return Math.pow(num, index);
+        });
+
+        var sum = arr.reduce(function (prev, curr) {
+            return prev + curr;
+        }, 0);
+
+        var filtered = arr.filter(function (num) {
+            return num % 2 === 0;
+        });
+
+        var every = arr.every(function (num) {
+            return num % 2 === 0;
+        });
+
+
+        console.log(every);
+
+    </script>
+</head>
+<body>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype">Arrays MDN</a>
+</body>
+</html>
